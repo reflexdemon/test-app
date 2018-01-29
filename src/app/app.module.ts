@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ReadjsonService } from './readjson.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { HttpHandler } from '@angular/common/http';
 
 
 @NgModule({
@@ -10,9 +14,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ReadjsonService,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
